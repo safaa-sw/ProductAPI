@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "8506c7bc-5dd5-4917-8e74-328c1a8b9abd",
+		"name": "productApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16570847"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"amal\",\r\n    \"email\":\"amal@test.com\",\r\n    \"password\":\"12345678\",\r\n    \"c_password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/register",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"amal@test.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTFlMzM4MzI4NGZiMmNmNmRkMjAxMzg0YjRkODA3MGMzMmNkY2RlNmIxYTdlNWUzY2JhYWIzNTFiNDFhMTEwYjI2YjU5NzAzZjMxNzAxYzQiLCJpYXQiOjE2NDYyMjA5NjQsIm5iZiI6MTY0NjIyMDk2NCwiZXhwIjoxNjc3NzU2OTY0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.VfcSXcyJTI0WTH761-pZG9pzIrJft_iC-XS4pMcZVkH0UAPNxv4f3XuwEdEEiE57eC7yzoOPf3Uedr2_oltzLF_2nrL5P68tcnC54EUHbPS-HlyKM_am8yMEbGvo_9WkSBChccvhZ5E6a2gqVyVpdRFmZ6_jpAai7j-FhKurhNJepIk-iMIjXPTaju558RNvZtgVUdDAkIjm0yRs01ueA0g-z4QXoft1pQ80fkE_DVK8b97Sjfytzj4yvBbJ36Gbddx223PGrvTrsM2-G-e1XvxtrXgMvSBwDWRX6MkiB2DWTDfUOYKLjdyJgkJJtISFro-pTYWkmmP5vakQ8TVaJ3l30BrI5DoRrJFuNl2GeLBe3JF_UL3ddWonUfRj3zFZJR0YQeNz0JY327tETTH9nXV1bfx40bRFWkIiVIRORNy1W9xCy9b0BgBd3eq_wEFVO4BmSEC5_HvFXgzcpeXJvHs9_ko8BItGlDB8opicwSZGWTfQhxtXFhZQ_2QSnZICYEr-CBUMHEFdcVfE4iffGFSiKSPFFYA0QG0813IfXygaj0hnGR6_CiWFRxdwwDBWWFDuyPicuDBSnfW8cchv_yDTJuAOxTz6bGCYHQFHD7cjq9x17dfJxtmrQcJLNpXoQd2Fk9axBxbkdRWidsWBgiT766HYA_we3iAdTXFv43Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTFlMzM4MzI4NGZiMmNmNmRkMjAxMzg0YjRkODA3MGMzMmNkY2RlNmIxYTdlNWUzY2JhYWIzNTFiNDFhMTEwYjI2YjU5NzAzZjMxNzAxYzQiLCJpYXQiOjE2NDYyMjA5NjQsIm5iZiI6MTY0NjIyMDk2NCwiZXhwIjoxNjc3NzU2OTY0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.VfcSXcyJTI0WTH761-pZG9pzIrJft_iC-XS4pMcZVkH0UAPNxv4f3XuwEdEEiE57eC7yzoOPf3Uedr2_oltzLF_2nrL5P68tcnC54EUHbPS-HlyKM_am8yMEbGvo_9WkSBChccvhZ5E6a2gqVyVpdRFmZ6_jpAai7j-FhKurhNJepIk-iMIjXPTaju558RNvZtgVUdDAkIjm0yRs01ueA0g-z4QXoft1pQ80fkE_DVK8b97Sjfytzj4yvBbJ36Gbddx223PGrvTrsM2-G-e1XvxtrXgMvSBwDWRX6MkiB2DWTDfUOYKLjdyJgkJJtISFro-pTYWkmmP5vakQ8TVaJ3l30BrI5DoRrJFuNl2GeLBe3JF_UL3ddWonUfRj3zFZJR0YQeNz0JY327tETTH9nXV1bfx40bRFWkIiVIRORNy1W9xCy9b0BgBd3eq_wEFVO4BmSEC5_HvFXgzcpeXJvHs9_ko8BItGlDB8opicwSZGWTfQhxtXFhZQ_2QSnZICYEr-CBUMHEFdcVfE4iffGFSiKSPFFYA0QG0813IfXygaj0hnGR6_CiWFRxdwwDBWWFDuyPicuDBSnfW8cchv_yDTJuAOxTz6bGCYHQFHD7cjq9x17dfJxtmrQcJLNpXoQd2Fk9axBxbkdRWidsWBgiT766HYA_we3iAdTXFv43Y",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "accept",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/products",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTFlMzM4MzI4NGZiMmNmNmRkMjAxMzg0YjRkODA3MGMzMmNkY2RlNmIxYTdlNWUzY2JhYWIzNTFiNDFhMTEwYjI2YjU5NzAzZjMxNzAxYzQiLCJpYXQiOjE2NDYyMjA5NjQsIm5iZiI6MTY0NjIyMDk2NCwiZXhwIjoxNjc3NzU2OTY0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.VfcSXcyJTI0WTH761-pZG9pzIrJft_iC-XS4pMcZVkH0UAPNxv4f3XuwEdEEiE57eC7yzoOPf3Uedr2_oltzLF_2nrL5P68tcnC54EUHbPS-HlyKM_am8yMEbGvo_9WkSBChccvhZ5E6a2gqVyVpdRFmZ6_jpAai7j-FhKurhNJepIk-iMIjXPTaju558RNvZtgVUdDAkIjm0yRs01ueA0g-z4QXoft1pQ80fkE_DVK8b97Sjfytzj4yvBbJ36Gbddx223PGrvTrsM2-G-e1XvxtrXgMvSBwDWRX6MkiB2DWTDfUOYKLjdyJgkJJtISFro-pTYWkmmP5vakQ8TVaJ3l30BrI5DoRrJFuNl2GeLBe3JF_UL3ddWonUfRj3zFZJR0YQeNz0JY327tETTH9nXV1bfx40bRFWkIiVIRORNy1W9xCy9b0BgBd3eq_wEFVO4BmSEC5_HvFXgzcpeXJvHs9_ko8BItGlDB8opicwSZGWTfQhxtXFhZQ_2QSnZICYEr-CBUMHEFdcVfE4iffGFSiKSPFFYA0QG0813IfXygaj0hnGR6_CiWFRxdwwDBWWFDuyPicuDBSnfW8cchv_yDTJuAOxTz6bGCYHQFHD7cjq9x17dfJxtmrQcJLNpXoQd2Fk9axBxbkdRWidsWBgiT766HYA_we3iAdTXFv43Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"copier\",\r\n    \"detail\":\"copier description\",\r\n    \"price\":\"1000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/products",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTFlMzM4MzI4NGZiMmNmNmRkMjAxMzg0YjRkODA3MGMzMmNkY2RlNmIxYTdlNWUzY2JhYWIzNTFiNDFhMTEwYjI2YjU5NzAzZjMxNzAxYzQiLCJpYXQiOjE2NDYyMjA5NjQsIm5iZiI6MTY0NjIyMDk2NCwiZXhwIjoxNjc3NzU2OTY0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.VfcSXcyJTI0WTH761-pZG9pzIrJft_iC-XS4pMcZVkH0UAPNxv4f3XuwEdEEiE57eC7yzoOPf3Uedr2_oltzLF_2nrL5P68tcnC54EUHbPS-HlyKM_am8yMEbGvo_9WkSBChccvhZ5E6a2gqVyVpdRFmZ6_jpAai7j-FhKurhNJepIk-iMIjXPTaju558RNvZtgVUdDAkIjm0yRs01ueA0g-z4QXoft1pQ80fkE_DVK8b97Sjfytzj4yvBbJ36Gbddx223PGrvTrsM2-G-e1XvxtrXgMvSBwDWRX6MkiB2DWTDfUOYKLjdyJgkJJtISFro-pTYWkmmP5vakQ8TVaJ3l30BrI5DoRrJFuNl2GeLBe3JF_UL3ddWonUfRj3zFZJR0YQeNz0JY327tETTH9nXV1bfx40bRFWkIiVIRORNy1W9xCy9b0BgBd3eq_wEFVO4BmSEC5_HvFXgzcpeXJvHs9_ko8BItGlDB8opicwSZGWTfQhxtXFhZQ_2QSnZICYEr-CBUMHEFdcVfE4iffGFSiKSPFFYA0QG0813IfXygaj0hnGR6_CiWFRxdwwDBWWFDuyPicuDBSnfW8cchv_yDTJuAOxTz6bGCYHQFHD7cjq9x17dfJxtmrQcJLNpXoQd2Fk9axBxbkdRWidsWBgiT766HYA_we3iAdTXFv43Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/products/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTFlMzM4MzI4NGZiMmNmNmRkMjAxMzg0YjRkODA3MGMzMmNkY2RlNmIxYTdlNWUzY2JhYWIzNTFiNDFhMTEwYjI2YjU5NzAzZjMxNzAxYzQiLCJpYXQiOjE2NDYyMjA5NjQsIm5iZiI6MTY0NjIyMDk2NCwiZXhwIjoxNjc3NzU2OTY0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.VfcSXcyJTI0WTH761-pZG9pzIrJft_iC-XS4pMcZVkH0UAPNxv4f3XuwEdEEiE57eC7yzoOPf3Uedr2_oltzLF_2nrL5P68tcnC54EUHbPS-HlyKM_am8yMEbGvo_9WkSBChccvhZ5E6a2gqVyVpdRFmZ6_jpAai7j-FhKurhNJepIk-iMIjXPTaju558RNvZtgVUdDAkIjm0yRs01ueA0g-z4QXoft1pQ80fkE_DVK8b97Sjfytzj4yvBbJ36Gbddx223PGrvTrsM2-G-e1XvxtrXgMvSBwDWRX6MkiB2DWTDfUOYKLjdyJgkJJtISFro-pTYWkmmP5vakQ8TVaJ3l30BrI5DoRrJFuNl2GeLBe3JF_UL3ddWonUfRj3zFZJR0YQeNz0JY327tETTH9nXV1bfx40bRFWkIiVIRORNy1W9xCy9b0BgBd3eq_wEFVO4BmSEC5_HvFXgzcpeXJvHs9_ko8BItGlDB8opicwSZGWTfQhxtXFhZQ_2QSnZICYEr-CBUMHEFdcVfE4iffGFSiKSPFFYA0QG0813IfXygaj0hnGR6_CiWFRxdwwDBWWFDuyPicuDBSnfW8cchv_yDTJuAOxTz6bGCYHQFHD7cjq9x17dfJxtmrQcJLNpXoQd2Fk9axBxbkdRWidsWBgiT766HYA_we3iAdTXFv43Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"fax\",\r\n    \"detail\":\"fax just update description\",\r\n    \"price\":\"5050\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/products/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTFlMzM4MzI4NGZiMmNmNmRkMjAxMzg0YjRkODA3MGMzMmNkY2RlNmIxYTdlNWUzY2JhYWIzNTFiNDFhMTEwYjI2YjU5NzAzZjMxNzAxYzQiLCJpYXQiOjE2NDYyMjA5NjQsIm5iZiI6MTY0NjIyMDk2NCwiZXhwIjoxNjc3NzU2OTY0LCJzdWIiOiI3Iiwic2NvcGVzIjpbXX0.VfcSXcyJTI0WTH761-pZG9pzIrJft_iC-XS4pMcZVkH0UAPNxv4f3XuwEdEEiE57eC7yzoOPf3Uedr2_oltzLF_2nrL5P68tcnC54EUHbPS-HlyKM_am8yMEbGvo_9WkSBChccvhZ5E6a2gqVyVpdRFmZ6_jpAai7j-FhKurhNJepIk-iMIjXPTaju558RNvZtgVUdDAkIjm0yRs01ueA0g-z4QXoft1pQ80fkE_DVK8b97Sjfytzj4yvBbJ36Gbddx223PGrvTrsM2-G-e1XvxtrXgMvSBwDWRX6MkiB2DWTDfUOYKLjdyJgkJJtISFro-pTYWkmmP5vakQ8TVaJ3l30BrI5DoRrJFuNl2GeLBe3JF_UL3ddWonUfRj3zFZJR0YQeNz0JY327tETTH9nXV1bfx40bRFWkIiVIRORNy1W9xCy9b0BgBd3eq_wEFVO4BmSEC5_HvFXgzcpeXJvHs9_ko8BItGlDB8opicwSZGWTfQhxtXFhZQ_2QSnZICYEr-CBUMHEFdcVfE4iffGFSiKSPFFYA0QG0813IfXygaj0hnGR6_CiWFRxdwwDBWWFDuyPicuDBSnfW8cchv_yDTJuAOxTz6bGCYHQFHD7cjq9x17dfJxtmrQcJLNpXoQd2Fk9axBxbkdRWidsWBgiT766HYA_we3iAdTXFv43Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/products/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"products",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		}
+	]
+}
